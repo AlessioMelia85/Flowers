@@ -17,6 +17,7 @@ $query = $flowers -> find('all',[
 
 'contain' => ['opportunities'],
 
+// debug($query);
 
 ]);
 echo '<body>';
