@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 24, 2020 alle 13:34
+-- Creato il: Apr 28, 2020 alle 09:11
 -- Versione del server: 10.4.11-MariaDB
 -- Versione PHP: 7.4.3
 
@@ -30,22 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `flowers` (
   `id` int(11) NOT NULL,
-  `nome` varchar(32) NOT NULL,
-  `occasione` text NOT NULL,
-  `costo` float NOT NULL,
-  `quantita` int(11) NOT NULL
+  `name` varchar(32) NOT NULL,
+  `opportunity_id` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dump dei dati per la tabella `flowers`
 --
 
-INSERT INTO `flowers` (`id`, `nome`, `occasione`, `costo`, `quantita`) VALUES
-(1, 'Tulipano', 'Compleanno.\r\n\r\nIl compleanno è una ricorrenza annuale.\r\nTi ricorda che il tempo passa e te invecchi.', 4.5, 10),
-(2, 'Orchidea', 'Fidanzamento\r\n\r\nIl fidanzamento è un usanza alquanto discussa in questo nostro negozio..\r\nInsomma..voglio dire..perchè legarsi a una persona quando la convivenza tra noi stessi è già complicata??\r\nVoglio dire..', 3.23, 6),
-(3, 'Viola', 'Matrimonio\r\n\r\nEcco..abbiamo speso già diverse parole per quanto riguarda il fidanzamento..figuriamoci il matrimonio dove dobbiamo coinvolgere anche il signore.', 2.99, 5),
-(4, 'Rosa bianca', 'Promozione\r\n\r\nEbbene questo è un motivo meno consono per dei fiori..magari per il gentilsesso..mah?!', 4, 9),
-(5, 'Gardenia', 'Nascituri\r\n\r\nInsegniamo alle creature sin da subito ad apprezzare i fiori..sperando non abbiano già sviluppato delle allergie..piccini!!!', 3.46, 1);
+INSERT INTO `flowers` (`id`, `name`, `opportunity_id`, `price`, `quantity`) VALUES
+(3, 'Tulipano', 3, 12, 100),
+(4, 'Rosa rosa', 4, 7, 6),
+(5, 'Rosa bianca', 5, 9.49, 10),
+(6, 'Orchidea', 6, 4.87, 4),
+(7, 'Gardenia', 7, 7.49, 5);
 
 --
 -- Indici per le tabelle scaricate
@@ -55,7 +55,8 @@ INSERT INTO `flowers` (`id`, `nome`, `occasione`, `costo`, `quantita`) VALUES
 -- Indici per le tabelle `flowers`
 --
 ALTER TABLE `flowers`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `opportunity_id` (`opportunity_id`);
 
 --
 -- AUTO_INCREMENT per le tabelle scaricate
@@ -65,7 +66,7 @@ ALTER TABLE `flowers`
 -- AUTO_INCREMENT per la tabella `flowers`
 --
 ALTER TABLE `flowers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 24, 2020 alle 17:41
+-- Creato il: Apr 28, 2020 alle 09:09
 -- Versione del server: 10.4.11-MariaDB
 -- Versione PHP: 7.4.3
 
@@ -40,7 +40,10 @@ CREATE TABLE `opportunities` (
 
 INSERT INTO `opportunities` (`id`, `name`, `description`) VALUES
 (3, 'Matrimonio', 'Evento interessante'),
-(4, 'Compleanno', 'Una volta l\'anno');
+(4, 'Compleanno', 'Una volta l\'anno'),
+(5, 'Promozione', 'Ebbene questo è un motivo meno consono per dei fiori..magari per il gentilsesso..mah?!'),
+(6, 'Fidanzamento', 'Il fidanzamento è un usanza alquanto discussa in questo nostro negozio..\r\nInsomma..voglio dire..perchè legarsi a una persona quando la convivenza tra noi stessi è già complicata??\r\nVoglio dire..'),
+(7, 'Nascituri', 'Insegniamo alle creature sin da subito ad apprezzare i fiori..sperando non abbiano già sviluppato delle allergie..piccini!!!\r\n');
 
 --
 -- Indici per le tabelle scaricate
@@ -60,7 +63,7 @@ ALTER TABLE `opportunities`
 -- AUTO_INCREMENT per la tabella `opportunities`
 --
 ALTER TABLE `opportunities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
