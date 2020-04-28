@@ -55,7 +55,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * Apply a middleware to the current route scope.
      * Requires middleware to be registered through `Application::routes()` with `registerMiddleware()`
      */
+<<<<<<< HEAD
     // $builder->applyMiddleware('csrf');
+=======
+    //$builder->applyMiddleware('csrf');
+>>>>>>> a1b8ecb54fea77f3666768e13fe741a532c51fe9
 
     /*
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
